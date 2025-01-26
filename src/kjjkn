@@ -1,0 +1,7 @@
+const PasswordInput = () => {
+  const [showPassword, setShowPassword] = useState(false);
+
+  return (
+    
+  );
+};
