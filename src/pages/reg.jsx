@@ -17,7 +17,10 @@ const Reg = () => {
     setSuccessMessage('');
 
     try {
-      const response = await axios.post('http://localhost:5000/register', formData);
+      const response = await axios.post('https://usermanagemet-server.vercel.app/register', formData);
+      console.log('====================================');
+      console.log(response);
+      console.log('====================================');
       setSuccessMessage('Registration successful! You can now log in.');
       setFormData({ name: '', email: '', password: '' }); // Reset the form
     } catch (error) {

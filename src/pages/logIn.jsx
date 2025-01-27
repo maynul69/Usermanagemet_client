@@ -8,7 +8,10 @@ const LogIn = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/login', { email, password });
+      const response = await axios.post('https://usermanagemet-server.vercel.app/login', { email, password });
+      console.log('====================================');
+      console.log(response);
+      console.log('====================================');
       const { token, user } = response.data;
   
       // Store the token in localStorage
@@ -31,7 +34,7 @@ const LogIn = () => {
   // const handleLogin = async (e) => {
   //   e.preventDefault();
   //   try {
-  //     const response = await axios.post('http://localhost:5000/login', { email, password });
+  //     const response = await axios.post('https://usermanagemet-server.vercel.app/login', { email, password });
   //     const { token, user } = response.data;
 
   //     // Store the token in localStorage
